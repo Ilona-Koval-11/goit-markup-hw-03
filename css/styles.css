@@ -1,12 +1,5 @@
                                         /* Normalize*/
-  html{
-box-sizing: border-box;
-  }                                        
-*
-*::after, 
-*::before{
-    box-sizing: inherit;
-}
+
 /*Стилі для обнулення верхніх відступів у елементів*/
 h1,
 h2,
@@ -59,23 +52,23 @@ ul{
 
 
 .page-header{
-width: 1200px;
-padding-left: 15px;
-padding-right: 15px;
-margin-left: auto;
-margin-right: auto;
-border: 1px solid var(--border-color);
+
+border-bottom: 1px solid var(--border-color);
 }
 
 
 .flex-container-header{ 
 display: flex;
 justify-content: space-between;
+width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .menu-link-header {
-    list-style: none;
-    color: var(--link-color);
+       color: var(--link-color);
     text-decoration: none;
     font-family: inherit;
     font-weight: 500;
@@ -83,12 +76,16 @@ justify-content: space-between;
     height: 16px;
     padding-top: 32px;
     padding-bottom: 32px;
+    display: block;
     margin-right: 50px;
+    
 }
 
-.menu-link-header:not(:last-child) {
-    margin-right: 15px;
+.menu-link-header:nth-last-child(2) {
+    margin-right: 0;  
 }
+
+
 
 .logo{
 font-family: 'Raleway', sans-serif;
@@ -118,8 +115,7 @@ color: var(--color-main) ;
 }
 
 .contacts {
-       margin-top: 32px;
-       margin-bottom: 32px;
+     
    }
 
    .nav {
@@ -204,8 +200,15 @@ border-radius: 5px;
 
                                          /* section-two*/
 
-.hidden {
-    visibility: hidden;
+.visually-hidden {
+    position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        border: 0;
+        clip: rect(0 0 0 0);
 }
 
 .flex-container-preferences {
@@ -224,9 +227,7 @@ border-radius: 5px;
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--small-section-title-color);
-    margin-bottom: 15px;
-    margin-right: 60px;
-    display: flex;
+    margin-bottom: 10px;
 }
 
 .small-section-title:last-child {
@@ -242,14 +243,18 @@ border-radius: 5px;
 }
 
 .preferences{
-padding-right: 30px;
+margin-right: 30px;
+width: 270px;
+}
+
+.preferences:last-child {
+    margin-right: 0;
 }
 
                                           /* section-three*/
 
 .section-three-container{
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-top: 0;
 }
 
 .flex-item-activities{
@@ -279,7 +284,8 @@ margin-right:0;
 
                                   /* section-four*/
 .section-four{
-    color: var(--team-background-color);
+    background-color: var(--team-background-color);
+
 }
 
 .secondary-title {
@@ -337,22 +343,22 @@ color: var(--container-preferences-color);
 text-align: center;
 
 margin-top: 10px;
+margin-bottom: 30px;
 }
 
 .menu-link{
-    list-style: none;
-    color:var(--color-main);
-    text-decoration: none;
-    font-family: inherit;
-    font-weight: 500;
-    height: 16px;
-    padding-top: 32px;
-    padding-bottom: 32px;
+margin-right: 50px;
+    display: block;
+   
+}
+
+.menu-link:not(:last-child){
     margin-right: 50px;
 }
-.menu-link:not(:last-child){
-    margin-right: 0;
-}
+
+
+
+
 
 .menu-link:hover{
         color: var(--secondary-color);
@@ -390,14 +396,16 @@ margin-top: 10px;
     color: var(--color-main);
     background-color: var(--minor-color);
     letter-spacing: 0.03em;
-    padding-left: 8px;
-    padding-top: 10px;
-    padding-right: 32px;
-    padding-bottom: 10px;
+    padding:6px 22px;
+border: navajowhite;
+    margin-right: 8px;
+    background-color: var(--team-background-color);
+    border-radius: 4px;
+    
 }
 
-.button-second:first-child {
-    margin-left: 0;
+.button-second :not(:last-child) {
+        margin-right: 8px;
 }
 
 .button-second:hover {
@@ -410,12 +418,10 @@ margin-top: 10px;
     background-color: var(--secondary-color);
 }
 .container-button{
-    width: 1200px;
+    
         padding-left: 15px;
         padding-right: 15px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top:94px ;
+       
 }
 
 
@@ -428,15 +434,12 @@ display:flex;
 }
 
 .flex-element-button{
-    padding-top: 6px;
-    padding-left: 22px;
-    padding-bottom: 6px;
-    padding-right: 22px;
+    
     margin-right: 8px;
 }
 
 .flex-element-button:not(last-child){
-    margin-right: 0;
+
 }
 
                                             /*container-projects*/
@@ -470,7 +473,6 @@ margin-right: 0;
 
     .flex-element-title{
         padding-left: 24px;
-        padding-top: 20px ;
         padding-right: 24px;
         padding-bottom: 20px;
         border: 1px solid var(--border-color);
