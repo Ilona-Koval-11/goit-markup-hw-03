@@ -74,8 +74,7 @@ border-bottom: 1px solid var(--border-color);
  }
 
  .menu-link{
-    display: block;
-    padding: 32px 0;
+  font-weight: 500;
  }
 
 
@@ -218,6 +217,7 @@ border-radius: 5px;
 .menu-first {
     list-style: none;
     display: flex;
+    font-weight: 500;
 }
 
 .small-section-title {
@@ -310,6 +310,7 @@ margin-right: 0px;
 
 .picture {
     margin-right: 30px;
+    background-color: var(--minor-color);
     
     
     border-radius: 0px 0px 4px 4px;
@@ -457,8 +458,11 @@ margin-right: 0;
     .flex-element-title{
         padding-left: 24px;
         padding-right: 24px;
+        padding-top: 20px;
         padding-bottom: 20px;
-        border: 1px solid var(--border-color);
+        border-right: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+        border-left: 1px solid var(--border-color);
     }
 
                                             /* footer*/
@@ -512,7 +516,7 @@ width: 147px;
     margin: bottom 34px; ;
 }
 .menu {
-    padding: 0;
+    
     
     
 }
